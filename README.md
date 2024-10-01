@@ -13,3 +13,9 @@ Currently, two official plugins are available:
 >>>>>>> cb8ed30 (Initial commit)
 
 make sure to replace the database name and password with your own
+Please replace EmailJS Credentials with yours
+
+Frontend: React
+Backend: Node.js, Express.js
+Email Integration: EmailJS
+Database: MySQL
