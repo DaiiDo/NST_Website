@@ -1,0 +1,1265 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #74747356; /* Light background color for the entire page */
+
+
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better separation */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.logo-container img {
+  max-width: 350px; /* Reduced size of the logo */
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+
+nav a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+.spacer {
+  height: 0vh; /* Adjust this height as needed */
+  background: transparent; /* Optional: set to a color if needed for visibility */
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Position above the hero section */
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh; /* Full viewport height */
+  background-image: url('C:\Stage\NST-Groupe\src\assets/consult.jpg'); /* Update with the correct path */
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center top; /* Align image at the top */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed; /* Keep the image fixed during scroll */
+  color: rgb(255, 255, 255); /* Ensure text is readable over the background */
+  opacity: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden; /* Hide overflow caused by pseudo-element */
+}
+
+/* Overlay for Background Image */
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 32, 137, 0.867); /* Red overlay with 50% opacity */
+  z-index: -1; /* Place the red overlay between the background image and the text */
+}
+/* Hero Section Content */
+.hero-content {
+  position: relative; /* Ensure content is above overlay */
+  z-index: 1; /* Content should be on top */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Adjusted Button Size */
+.hero button {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem; /* Increased padding for larger button */
+  font-size: 1.1rem; /* Increased font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #0056b3;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-item {
+  background: white;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #000; /* Change text color to black for better readability */
+}
+
+.testimonial-item:hover blockquote {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for better readability */
+}
+
+.testimonial-item blockquote {
+  margin: 0;
+  font-style: italic;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-item p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.testimonial-item cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Contact Prompt Section */
+.contact-prompt {
+  
+  padding: 3rem;
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px; /* Center content */  
+}
+
+.contact-content {
+  padding: 2rem;
+}
+
+.contact-prompt h2 {
+  font-size: 2.5rem;
+  color: #333; /* Darker text color for readability */
+  margin-bottom: 1rem;
+}
+
+.contact-prompt p {
+  font-size: 1.2rem;
+  color: #555; /* Slightly lighter text color */
+}
+
+.contact-link {
+  color: #007bff; /* Highlight color for links */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #445289; /* Dark background for footer */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 1rem;
+  font-size: 2rem; /* Larger icon size for visibility */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Highlight color on hover */
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Space between icon and text */
+  margin-bottom: 0.5rem;
+}
+
+.info-item p {
+  margin: 0;
+}
+
+.footer-copyright {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.BG{
+  position: relative;
+  height: 70vh; /* Full viewport height */
+  background-image: url('C:\Stage\NST-Groupe\src\assets/contact1.jpg'); /* Update with the correct path */
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center  ; /* Align image at the top */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: scroll; /* Keep the image fixed during scroll */
+  color: rgb(255, 255, 255); /* Ensure text is readable over the background */
+  opacity: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden; /* Hide overflow caused by pseudo-element */
+  background-size: 1600px 1085px;
+}
+/* Services Section */
+.services {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9; /* Light background for the services section */
+  text-align: center;
+  background-image: url('C:/Stage/NST-Groupe/src/assets/services.jpg');
+  position: relative;
+  height: 70vh;
+  background-size: 1600px 1000px; /* Ensure the image covers the section */
+  background-position: center top; /* Align image at the top */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed; /* Keep the image fixed during scroll */
+  color: #ffffff; /* Ensure text is readable over the background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0.8; /* Adjust opacity for better readability */
+}
+.services1{
+  padding: 4rem 2rem;
+  background-color: #f9f9f9; /* Light background for the services section */
+  text-align: center;
+  background-image: url('C:/Stage/NST-Groupe/src/assets/meeting.jpg');
+  position: relative;
+  height: 20vh;
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center; /* Align image at the top */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed; /* Keep the image fixed during scroll */
+  color: #ffffff; /* Ensure text is readable over the background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0.8; /* Adjust opacity for better readability */
+}
+.services-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: #ffffff; /* Light text color for the title */
+  margin-bottom: 1rem;
+}
+
+.services p {
+  font-size: 1.2rem;
+  color: #ffffff; /* Light text color */
+  line-height: 1.6;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 32, 137, 0.867); /* Blue overlay with 50% opacity */
+  z-index: -1; /* Place the overlay behind content */
+}
+.services1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 32, 137, 0.867); /* Blue overlay with 50% opacity */
+  z-index: -1; /* Place the overlay behind content */
+}
+/* Services Details Section */
+.services-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  padding: 2rem;
+  background-color: #ffffff; /* White background for the details section */
+}
+
+.service-item {
+  flex: 1 1 calc(70% - 2rem); /* Adjust the size of each item */
+  margin: 1rem; /* Space between items */
+  padding: 1.5rem; /* Add padding for better spacing */
+  text-align: center; /* Center align text */
+  background-color: #f1f1f1; /* Light grey background for individual service items */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Slight shadow for depth */
+  cursor: pointer;
+  overflow: hidden; /* Ensure text doesn't overflow */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, max-height 0.4s ease; /* Smooth transition for hover effects */
+  position: relative; /* Position relative for absolute children */
+  max-height: 300px; /* Initial max height */
+}
+
+.service-logo {
+  margin-bottom: 1rem; /* Space between logo and text */
+}
+
+.service-item:hover {
+  transform: translateY(-8px); /* Lift the item slightly on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Stronger shadow on hover */
+  background-color: #e0e0e0; /* Slightly darker background on hover */
+}
+
+.service-item h3 {
+  font-size: 2.5rem;
+  color: #333; /* Darker text color for the section title */
+  margin-bottom: 1rem;
+}
+
+.service-item p {
+  font-size: 1.7rem; /* Slightly larger font size for description */
+  color: #445289; /* Slightly lighter text color */
+  line-height: 1.6;
+  margin-bottom: 1rem; /* Space between description and more-info */
+}
+
+.more-info {
+  font-size: 1.5rem; /* Slightly smaller font size for more info */
+  color: #000; /* Dark text color for additional info */
+  margin-top: 0.5rem; /* Space above more-info */
+  max-height: 0; /* Initially collapsed */
+  overflow: hidden; /* Hide overflow content */
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease; /* Smooth transition for height and opacity */
+}
+
+.service-item.expanded {
+  max-height: 520px; /* Adjust height to accommodate expanded content */
+}
+
+.service-item.expanded .more-info {
+  max-height: 520px; /* Adjust as needed to fit expanded text */
+  opacity: 1;
+  display: block; /* Ensure it's visible when expanded */
+}
+
+/* General Styles */
+/* General Styles */
+.AboutUs {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-image: url('C:/Stage/NST-Groupe/src/assets/AboutUs.jpg');
+  position: relative;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  opacity:70%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.AboutUs h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.AboutUs::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 32, 137, 0.867);
+  z-index: -1;
+}
+
+.AboutUs-content h3 {
+  font-size: 2.1rem;
+  color: #092089; /* Changed color for emphasis */
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 1px; /* Added letter spacing */
+  animation: slideIn 1s ease-in-out;
+  animation-delay: 0.2s; /* Staggered delay for effect */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.AboutUs-content p {
+  font-size: 1.4rem; /* Slightly reduced size for contrast */
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: slideIn 1s ease-in-out;
+  animation-delay: 0.4s; /* Staggered delay for effect */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.AboutUs2 {
+  min-height: 40vh; /* Increased height for better spacing */
+  background-color: #f8f8f8; /* Softer background color */
+  padding: 5rem 3rem; /* Added padding for better layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-text:hover {
+  color: #0a33cc; /* Hover color change for interaction */
+  transform: translateY(-5px); /* Subtle hover effect */
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.AboutUs-content h3, .AboutUs-content p {
+  animation-fill-mode: forwards; /* Ensure the animation ends with visibility */
+}
+
+/* About Us Section 3 */
+.AboutUs3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: rgba(245, 245, 245, 0.8); /* Slightly more opaque background for readability */
+  height: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.AboutUs-left {
+  flex: 1;
+  padding: 1rem;
+}
+
+.AboutUs-left img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.AboutUs-left img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.AboutUs-right {
+  flex: 1;
+  padding: 2rem; /* Reduced padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AboutUs-right h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.AboutUs-right p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.voir-services-btn {
+  align-self: flex-start;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #092089;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.voir-services-btn:hover {
+  background-color: #0a33cc;
+  transform: translateY(-2px);
+}
+
+/* Animations and Transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.AboutUs-content, .AboutUs-left, .AboutUs-right {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .AboutUs3 {
+    flex-direction: column;
+  }
+
+  .AboutUs-left, .AboutUs-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .AboutUs-left {
+    margin-bottom: 2rem;
+  }
+
+  .voir-services-btn {
+    align-self: center;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/*Team*/
+
+/* Hero Section */
+.Team {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-image: url('C:/Stage/NST-Groupe/src/assets/Team.jpg'); /* Adjust the path to your image */
+  position: relative;
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.Team h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: zoomIn 1s ease-in-out;
+}
+
+.Team h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: slideUp 1s ease-in-out;
+}
+
+.Team2 {
+  height: auto;
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.Team-content h3 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: slideInRight 1s ease-in-out;
+}
+
+.Team-content p {
+  font-size: 1.5rem;
+  color: #161616;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+/* Parallax Effect */
+.Team::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 32, 137, 0.616);
+  z-index: -1;
+}
+
+/* Animations */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Team {
+    height: 50vh;
+    background-attachment: scroll;
+  }
+
+  .Team h1 {
+    font-size: 2rem;
+  }
+
+  .Team h2 {
+    font-size: 1.5rem;
+  }
+
+  .Team2 {
+    padding: 2rem 1rem;
+  }
+}
+
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 00px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-image: url('C:\Stage\NST-Groupe\src\assets\support.jpg'); /* Add your background image path here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #092089;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #092089;
+  outline: none;
+  box-shadow: 0 0 8px rgba(9, 32, 137, 0.5);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #092089;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0a33cc;
+  transform: translateY(-2px);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    font-size: 1rem;
+  }
+}
+
+/*Event*/
+/* Events List */
+.events-list {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.events-list h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #092089;
+  text-align: center;
+}
+
+.events-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.events-list li {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Positioning for action buttons */
+}
+
+.events-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.events-list li h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  color: #092089;
+}
+
+.events-list li p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Event Image */
+/* Events List */
+.events-list {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.events-list h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #092089;
+  text-align: center;
+}
+
+.events-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.events-list li {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Container for event details and image */
+.event-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Event details styling */
+.event-details {
+  flex: 1;
+  margin-right: 1rem; /* Space between text and image */
+}
+
+/* Event Image styling */
+.event-image {
+  max-width: 40%; /* Adjust as needed */
+}
+
+.event-image img {
+  width: 100%; /* Scales image to fit container */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Actions (Update and Delete Buttons) */
+.event-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.update-btn,
+.delete-btn,
+.submit-btn,
+.cancel-btn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.update-btn {
+  background-color: #4caf50; /* Green color for update */
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red color for delete */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e53935;
+  transform: translateY(-2px);
+}
+
+.submit-btn {
+  background-color: #092089;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #0a33cc;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #000;
+}
+
+.cancel-btn:hover {
+  background-color: #bbb;
+}
+
+/* Event Container */
+.event-container {
+  max-width: 768px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #092089;
+}
+
+.event-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.event-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.event-form input,
+.event-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.event-form input:focus,
+.event-form textarea:focus {
+  border-color: #092089;
+  outline: none;
+}
+
+.event-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Submit Button */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #092089;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0a33cc;
+  transform: translateY(-2px);
+}
+
+
+.event-form1 .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.event-form1 label {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-left: 400px;
+  font-weight: bold;
+  color: #333;
+}
+
+.event-form1 input,
+.event-form1 textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-left: 400px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.event-form1 input:focus,
+.event-form1 textarea:focus {
+  border-color: #092089;
+  outline: none;
+}
+
+.event-form1 textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Submit Button */
+.submit-btn1 {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-left: 400px;
+  background-color: #092089;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn1:hover {
+  background-color: #0a33cc;
+  transform: translateY(-2px);
+}
+
+
+
+/* Container for login page */
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #092089;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #092089;
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #092089;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0a33cc;
+  transform: translateY(-2px);
+}
+
+/* Links */
+.links {
+  margin-top: 1rem;
+}
+
+.links a {
+  color: #092089;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.login-icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.login-icon {
+  color: #092089; /* Color of the icon */
+  font-size: 20px; /* Size of the icon */
+  text-decoration: none;
+  margin-top: 20px; /* Push the icon to the far right */
+  transition: color 0.3s ease;
+}
+
+.login-icon:hover {
+  color: #0a33cc; /* Color on hover */
+}
+
+.logout-icon {
+  font-size: 24px; /* Adjust size as needed */
+  color: #000; /* Adjust color as needed */
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin-top: 20px; /* Space from other items */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.logout-icon:hover {
+  color: #f00; /* Change color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
