@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # Startup_Website
 Dynamic Website for NeuronSmartTechnologies StartUp
 =======
@@ -21,6 +20,5 @@ Backend: Node.js, Express.js
 Email Integration: EmailJS
 Database: MySQL
 =======
-# NST_Website
-Dynamic Website for NeuronSmartTechnologies StartUp
->>>>>>> d943e94ee8973621119803cd015fecba43422e74
+
+
